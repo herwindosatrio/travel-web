@@ -30,9 +30,7 @@
           Services
           </a>
           <div class="dropdown-menu">
-            <a href="#" class="dropdown-item">Link</a>
-            <a href="#" class="dropdown-item">Link</a>
-            <a href="#" class="dropdown-item">Link</a>
+            <a href="#" class="dropdown-item">Membership</a>
           </div>
         </li>
         <li class="nav-item mx-md-2">

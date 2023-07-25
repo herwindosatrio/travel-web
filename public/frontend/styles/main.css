@@ -34,7 +34,7 @@ body {
 }
 
 header {
-  padding: 180px 0 165px;
+  padding: 180px 0 100px;
   margin-top: -70px;
   background-image: url("../images/header.jpg");
   background-size: cover;
@@ -50,6 +50,35 @@ header h1 {
 }
 header p {
   font-size: 22px;
+}
+header form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  border-radius: 12rem 0 0 12rem;
+}
+header form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 0 12rem 12rem 0;
+}
+header form.example button:hover {
+  background: #0b7dda;
+}
+header form.example::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 header .btn-get-started {
   background-color: #FF9E53;

@@ -17,9 +17,13 @@
       <br>
       moment you never see before
     </p>
-    <a href="#popular" class="btn btn-get-started px-4 mt-4">
+    <a href="#popular" class="btn btn-get-started px-4 mt-4 mb-5">
       Get Started
     </a>
+    <form class="example" action="" style="margin:auto;max-width:400px">
+      <input type="text" placeholder="Cari Disini.." name="search2">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
   </header>
 
   <main>
@@ -121,64 +125,110 @@
     <section class="section section-testimonial-content" id="testimonialContent">
       <div class="container">
         <div class="section-popular-travel row justify-content-center">
-          <div class="col-sm-6 col-md-6 col-lg-4">
-            <div class="card card-testimonial text-center">
-              <div class="testimonial-content">
-                <img src="{{ url('frontend/images/testi-1.png') }}" 
-                alt="User"
-                class="mb-4 rounded-circle">
-                <h3 class="mb-4">Angga Rizky</h3>
-                <p class="testimonial">
-                  “ It was glorious and I could 
-                  not stop to say wohooo for 
-                  every single moment
-                  Dankeeeeee “
-                </p>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+          
+                <div class="card card-testimonial text-center">
+                  <div class="testimonial-content">
+                    <img src="{{ url('frontend/images/testi-1.png') }}" alt="User" class="mb-4 rounded-circle">
+                    <h3 class="mb-4">Angga Rizky</h3>
+                    <p class="testimonial">
+                      “ It was glorious and I could
+                      not stop to say wohooo for
+                      every single moment
+                      Dankeeeeee “
+                    </p>
+                  </div>
+                  <hr>
+                  <p class="trip-to mt-2">
+                    Trip to Ubud
+                  </p>
+                </div>
+          
               </div>
-              <hr>
-              <p class="trip-to mt-2">
-                Trip to Ubud
-              </p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-4">
-            <div class="card card-testimonial text-center">
-              <div class="testimonial-content">
-                <img src="{{ url('frontend/images/testi-2.png') }}" 
-                alt="User"
-                class="mb-4 rounded-circle">
-                <h3 class="mb-4">Shayna</h3>
-                <p class="testimonial">
-                  “ The trip was amazing and
-                  I saw something beautiful in
-                  that Island that makes me
-                  want to learn more “
-                </p>
+              <div class="swiper-slide">
+          
+                <div class="card card-testimonial text-center">
+                  <div class="testimonial-content">
+                    <img src="{{ url('frontend/images/testi-2.png') }}" alt="User" class="mb-4 rounded-circle">
+                    <h3 class="mb-4">Shayna</h3>
+                    <p class="testimonial">
+                      “ The trip was amazing and
+                      I saw something beautiful in
+                      that Island that makes me
+                      want to learn more “
+                    </p>
+                  </div>
+                  <hr>
+                  <p class="trip-to mt-2">
+                    Trip to Nusa Penida
+                  </p>
+                </div>
+          
               </div>
-              <hr>
-              <p class="trip-to mt-2">
-                Trip to Nusa Penida
-              </p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-4">
-            <div class="card card-testimonial text-center">
-              <div class="testimonial-content">
-                <img src="{{ url('frontend/images/testi-3.png') }}" 
-                alt="User"
-                class="mb-4 rounded-circle">
-                <h3 class="mb-4">Shabrina</h3>
-                <p class="testimonial">
-                  “ I loved it when the waves
-                  was shaking harder — I was
-                  scared too “
-                </p>
+              <div class="swiper-slide">
+          
+                <div class="card card-testimonial text-center">
+                  <div class="testimonial-content">
+                    <img src="{{ url('frontend/images/testi-3.png') }}" alt="User" class="mb-4 rounded-circle">
+                    <h3 class="mb-4">Shabrina</h3>
+                    <p class="testimonial">
+                      “ I loved it when the waves
+                      was shaking harder — I was
+                      scared too “
+                    </p>
+                  </div>
+                  <hr>
+                  <p class="trip-to mt-2">
+                    Trip to Karimun Jawa
+                  </p>
+                </div>
+          
               </div>
-              <hr>
-              <p class="trip-to mt-2">
-                Trip to Karimun Jawa
-              </p>
+              <div class="swiper-slide">
+              
+                <div class="card card-testimonial text-center">
+                  <div class="testimonial-content">
+                    <img src="{{ url('frontend/images/testi-4.png') }}" alt="User" class="mb-4 rounded-circle">
+                    <h3 class="mb-4">Jonathan</h3>
+                    <p class="testimonial">
+                      “ The trip was amazing and
+                      I saw something beautiful in
+                      that Island that makes me
+                      want to learn more “
+                    </p>
+                  </div>
+                  <hr>
+                  <p class="trip-to mt-2">
+                    Trip to Nusa Penida
+                  </p>
+                </div>
+              
+              </div>
+              <div class="swiper-slide">
+          
+                <div class="card card-testimonial text-center">
+                  <div class="testimonial-content">
+                    <img src="{{ url('frontend/images/testi-5.png') }}" alt="User" class="mb-4 rounded-circle">
+                    <h3 class="mb-4">Aulia</h3>
+                    <p class="testimonial">
+                      “ I loved it when the waves
+                      was shaking harder — I was
+                      scared too “
+                    </p>
+                  </div>
+                  <hr>
+                  <p class="trip-to mt-2">
+                    Trip to Karimun Jawa
+                  </p>
+                </div>
+          
+              </div>
             </div>
+            <!-- <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div> -->
+            <!-- <div class="swiper-pagination"></div> -->
           </div>
         </div>
         <div class="row">
@@ -186,7 +236,7 @@
             <a href="#" class="btn btn-need-help px-4 mt-4 mx-1">
               I Need Help
             </a>
-            <a href="{{ route('register') }}" class="btn btn-get-started px-4 mt-4 mx-1">
+            <a href="#" class="btn btn-get-started px-4 mt-4 mx-1">
               Get Started
             </a>
           </div>

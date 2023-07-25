@@ -44,25 +44,58 @@ body  {
 
 // Header
 header{
-   padding: 180px 0 165px;
-   margin-top: -70px;
-   background-image: url('../images/header.jpg');
-   background-size: cover;
+    padding: 180px 0 100px;
+    margin-top: -70px;
+    background-image: url('../images/header.jpg');
+    background-size: cover;
 
-   h1, 
-   p {
-      color: #ffffff;
-   }
+    h1, 
+    p {
+        color: #ffffff;
+    }
 
-   h1 {
-      font-family: 'Playfair Display', serif;
-      font-weight: bold;
-      font-size: 50px;
-   }
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-weight: bold;
+        font-size: 50px;
+    }
 
-   p {
-      font-size: 22px;
-   }
+    p {
+        font-size: 22px;
+    }
+
+    form.example input[type=text] {
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      float: left;
+      width: 80%;
+      background: #f1f1f1;
+      border-radius: 12rem 0 0 12rem;
+    }
+
+    form.example button {
+      float: left;
+      width: 20%;
+      padding: 10px;
+      background: #2196F3;
+      color: white;
+      font-size: 17px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+      border-radius: 0 12rem 12rem 0;
+    }
+
+    form.example button:hover {
+      background: #0b7dda;
+    }
+
+    form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
 
    .btn-get-started{
       background-color: #FF9E53;
@@ -194,7 +227,7 @@ header{
    margin-top: -300px;
    padding-bottom: 50px;
 
-   .card-testimonial {
+    .card-testimonial {
       padding: 40px 20px 10px;
       border-radius: 11px;
       margin-bottom: 20px;
@@ -454,7 +487,7 @@ header{
       }
    }
 }
-   .section-success {
+.section-success {
       height: 90vh;
 
       h1 {
