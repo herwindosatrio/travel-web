@@ -11,12 +11,12 @@
         <div class="row">
           <div class="col p-0">
             <nav>
-              <ol class="breadcrumb">
+              <ol class="breadcrumb ms-3">
                 <li class="breadcrumb-item">
-                  Paket Travel
+                  <a href="{{ route('home') }}">Paket Travel</a>
                 </li>
                 <li class="breadcrumb-item">
-                  Details
+                  <a href="{{ (route('detail', $item->id)) }}">Details</a>
                 </li>
                 <li class="breadcrumb-item active">
                   Checkout
@@ -42,8 +42,8 @@
               <p>
                 Trip to {{ $item->travel_package->title }}, {{ $item->travel_package->location }}
               </p>
-              <div class="attendee">
-                <table class="table table-responsive-sm text-center">
+              <div class="table-responsive-sm text-center">
+                <table class="table">
                   <thead>
                     <tr>
                       <td>Picture</td>
@@ -94,55 +94,62 @@
               </div>
               <div class="member mt-3">
                 <h2>Add Member</h2>
-                <form class="form-inline" method="post" action="{{ route('checkout-create', $item->id) }}">
-                  @csrf
-                  <label for="username" class="sr-only">Name</label>
-                  <input 
-                    type="text" 
-                    name="username"
-                    class="form-control mb-2 mr-sm-2" 
-                    id="username"
-                    required
-                    placeholder="Username"
-                  />
-
-                  <label for="nationality" class="sr-only">Nationality</label>
-                  <input 
-                    type="text" 
-                    name="nationality"
-                    class="form-control mb-2 mr-sm-2" 
-                    style="width: 50px"
-                    id="nationality"
-                    required
-                    placeholder="Nationality"
-                  />
-
-                  <label for="is_visa" class="sr-only">Visa</label>
-                  <select
-                    name="is_visa"
-                    id="is_visa"
-                    required
-                    class="custom-select mb-2 mr-sm-2"
-                    >
-                    <option value="" selected>VISA</option>
-                    <option value="1">30 Days</option>
-                    <option value="0">N/A</option>
-                  </select>
-
-                  <label for="doe_passport" class="sr-only">DOE Passport</label>
-                  <div class="input-group mb-2 mr-sm-2">
+                <form class="row g-2" method="post" action="{{ route('checkout-create', $item->id) }}">
+                  <div class="col-auto">
+                    @csrf
+                    <label for="username" class="visually-hidden">Name</label>
                     <input 
-                      type="text"
-                      name="doe_passport"
-                      class="form-control datepicker"
-                      id="doe_passport"
-                      placeholder="DOE Passport"
+                      type="text" 
+                      name="username"
+                      class="form-control mb-2 mr-sm-2" 
+                      id="username"
+                      required
+                      placeholder="Username"
                     />
                   </div>
-                  
-                  <button type="submit" class="btn btn-add-now mb-2 px-4">
-                    Add Now
-                  </button>
+                  <div class="col-auto">
+                    <label for="nationality" class="visually-hidden">Nationality</label>
+                    <input 
+                      type="text" 
+                      name="nationality"
+                      class="form-control mb-2 mr-sm-2" 
+                      style="width: 50px"
+                      id="nationality"
+                      required
+                      placeholder="Nationality"
+                    />
+                  </div>
+                  <div class="col-auto">
+                    <label for="is_visa" class="visually-hidden">Visa</label>
+                    <select
+                      name="is_visa"
+                      id="is_visa"
+                      required
+                      class="form-select mb-2 mr-sm-2"
+                      >
+                      <option value="" selected>VISA</option>
+                      <option value="1">30 Days</option>
+                      <option value="0">N/A</option>
+                    </select>
+                  </div>
+                  <div class="col-auto">
+                    <label for="doe_passport" class="visually-hidden">DOE Passport</label>
+                    <div class="input-group mb-2 mr-sm-2">
+                      <input 
+                        type="text"
+                        name="doe_passport"
+                        class="form-control datepicker"
+                        id="doe_passport"
+                        placeholder="DOE Passport"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <button type="submit" class="btn btn-add-now mb-2 px-4">
+                      Add Now
+                    </button>
+                  </div>
                 </form>
                 <h3 class="mt-2 mb-0">Note</h3>
                 <p class="disclaimer mb-0">
@@ -151,7 +158,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 pt-sm-4 pt-lg-0">
             <div class="card card-details card-right">           
                 <h2>Checkout Informations</h2>
                 <table class="trip-informations">
@@ -225,9 +232,11 @@
             <div class="join-container">
               <form action="{{ route('checkout-success', $item->id) }}" method="POST">
                 @csrf
-                <button type="submit" class="btn btn-block btn-join-now mt-3 py-2">
-                  Continue to Payment
-                </button>
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-block btn-join-now mt-3 py-2">
+                    Continue to Payment
+                  </button>
+                </div>
               </form>
             </div>
             <div class="text-center mt-3">
@@ -252,7 +261,7 @@
     $(document).ready(function() {
       $('.datepicker').datepicker({
         format: 'yyyy-mm-dd',
-        uiLibrary: 'bootstrap4',
+        uiLibrary: 'bootstrap5',
         icons: {
           rightIcon: '<img src="{{ url('frontend/images/ic_doe.png') }}" />'
         }

@@ -1,0 +1,318 @@
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+body {
+  background-color: #FFFFFF;
+  font-family: 'Mulish', sans-serif;
+  color: #071C4D;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link{
+  color: #212529;
+}
+.navbar-toggler{
+  color: #212529;
+  font-size: 15px;
+  padding: 0.75rem 1rem;
+}
+
+#nav-menu {
+  color: #18272F;
+  position: relative;
+  text-decoration: none;
+}
+
+@media (min-width: 992px){
+  #nav-menu::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #18272F;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .2s ease-in-out;
+  }
+  
+    #nav-menu:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}
+
+#login {
+  background-color: #2937f0;
+}
+#login:hover {
+  background-color: #1a217d;
+}
+
+header {
+  padding: 180px 0 100px;
+  /* margin-top: -70px; */
+  background-image: url("../images/header.jpg");
+  background-size: cover;
+}
+
+header h1,
+header p {
+  color: #ffffff;
+}
+
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+header p {
+  font-size: 22px;
+}
+
+header form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  border-radius: 12rem 0 0 12rem;
+}
+
+header form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 0 12rem 12rem 0;
+}
+
+header form.example button:hover {
+  background: #0b7dda;
+}
+
+header form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+header .btn-get-started {
+  background-color: #FF9E53;
+  color: #ffffff;
+}
+
+header .btn-get-started:hover {
+  background-color: #FFAA69;
+  color: #ffffff;
+}
+
+.section-stats {
+  margin-top: -50px;
+}
+
+.section-stats .stats-detail {
+  padding-top: 15px;
+  background-color: #ffffff;
+  padding-left: 40px;
+}
+
+.section-stats h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.section-stats p {
+  font-size: 1.1rem;
+  font-weight: lighter;
+}
+
+@media (max-width: 575.98px) {
+  .section-stats h3 {
+    font-size: 1.25rem;
+  }
+
+  .section-stats p {
+    font-size: 1rem;
+  }
+
+  .section-stats .stats-detail {
+    padding-left: 12px;
+  }
+}
+
+.section-popular {
+  min-height: 540px;
+  background-color: #051334;
+  margin-top: -50px;
+  margin-bottom: -230px;
+}
+
+.section-popular .section-popular-heading {
+  margin-top: 150px;
+}
+
+.section-popular .section-popular-heading h2,
+.section-popular .section-popular-heading p {
+  color: #ffffff;
+}
+
+.section-popular .section-popular-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.section-popular .section-popular-heading p {
+  font-size: 18px;
+}
+
+.section-popular-content .section-popular-travel .card-travel {
+  min-height: 380px;
+  background-color: #bbb;
+  color: #ffffff;
+  padding: 30px;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.section-popular-content .section-popular-travel .travel-country {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.section-popular-content .section-popular-travel .travel-location {
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.section-popular-content .section-popular-travel .travel-button .btn-travel-details {
+  background-color: #FF9E53;
+  color: #ffffff;
+}
+
+.section-popular-content .section-popular-travel .travel-button .btn-travel-details:hover {
+  background-color: #FFAA69;
+  color: #ffffff;
+}
+
+.section-networks {
+  background-color: #ffffff;
+  margin-top: -170px;
+  padding-top: 240px;
+  padding-bottom: 50px;
+}
+
+.section-networks h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.section-networks p {
+  font-size: 18px;
+}
+
+.section-networks img {
+  max-width: 100%;
+}
+
+.section-testimonial-heading {
+  background: linear-gradient(#fff 0%, #f7f9ff 100%);
+  padding-top: 50px;
+  min-height: 506px;
+}
+
+.section-testimonial-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.section-testimonial-heading p {
+  font-size: 18px;
+}
+
+.section-testimonial-content {
+  margin-top: -300px;
+  padding-bottom: 50px;
+}
+
+.section-testimonial-content .card-testimonial {
+  padding: 40px 20px 10px;
+  border-radius: 11px;
+  margin-bottom: 20px;
+}
+
+.section-testimonial-content .card-testimonial .testimonial-content {
+  min-height: 380px;
+}
+
+.section-testimonial-content .card-testimonial h3 {
+  font-size: 22px;
+}
+
+.section-testimonial-content .card-testimonial .testimonial {
+  font-weight: 200;
+  font-size: 20px;
+  color: #6e6e6e;
+  min-height: 160px;
+}
+
+.section-testimonial-content .card-testimonial .trip-to {
+  font-weight: normal;
+  font-size: 22px;
+  color: #6e6e6e;
+}
+
+.section-testimonial-content .card-testimonial hr {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+@media (max-width: 575.98px) {
+  #testimonial-card {
+    margin: 48px;
+  }
+}
+
+.section-testimonial-content .btn-get-started {
+  background-color: #FF9E53;
+  color: #ffffff;
+}
+
+.section-testimonial-content .btn-get-started:hover {
+  background-color: #FFAA69;
+  color: #ffffff;
+}
+
+.section-testimonial-content .btn-need-help {
+  background-color: #F2F2F2;
+  color: #C3C3C3;
+}
+
+.section-testimonial-content .btn-need-help:hover {
+  background-color: #FAFAFA;
+  color: #C3C3C3;
+}
+
+.section-footer a {
+  color: #071C4D;
+  text-decoration: none;
+}
+
+.section-footer a:hover {
+  color: #071C4D;
+  text-decoration: underline;
+}

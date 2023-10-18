@@ -34,7 +34,7 @@
               </div>
               <form method="POST" action="{{ route('login') }}">
                 @csrf
-                <div class="form-group">
+                <div id="nama" class="form-group mb-3">
                   <label for="email">{{ __('Email Address') }}</label>
                   <input 
                     type="email"
@@ -49,7 +49,7 @@
                     </span>
                   @enderror
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3">
                   <label for="password">{{ __('Password') }}</label>
                   <input 
                     type="password" 
@@ -64,7 +64,7 @@
                     </span>
                   @enderror
                 </div>
-                <div class="form-group form-check">
+                <div class="form-group form-check mb-3">
                   <input 
                     type="checkbox" 
                     class="form-check-input" 
@@ -75,20 +75,22 @@
                     {{ __('Remember Me') }}
                   </label>
                 </div>
-                <button 
-                  type="submit"
-                  class="btn btn-login btn-block"
-                >
-                  {{ __('Login') }}
-                </button>
-                <a class="btn btn-link" href="{{ route('register') }}">
-                    {{ __('Register') }}
-                </a>
-                @if (Route::has('password.request'))
-                  <a class="btn btn-link" href="{{ route('password.request') }}">
-                    {{ __('Forgot Your Password?') }}
-                  </a>
-                @endif
+                <div class="d-grid gap-2">
+                  <button 
+                    type="submit"
+                    class="btn btn-login btn-block"
+                  >
+                    {{ __('Login') }}
+                  </button>
+                    <a class="btn btn-link" href="{{ route('register') }}">
+                      {{ __('Register') }}
+                    </a>
+                    @if (Route::has('password.request'))
+                    <a class="btn btn-link" href="{{ route  ('password.request') }}">
+                      {{ __('Forgot Your Password?') }}
+                    </a>
+                    @endif
+                </div>
               </form>
             </div>
           </div>

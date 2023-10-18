@@ -9,18 +9,18 @@
     <section class="section-details-content">
        <div class="container">
           <div class="row">
-             <div class="col p-0">
-                <nav>
-                   <ol class="breadcrumb">
-                      <li class="breadcrumb-item">
-                         Paket Travel
-                      </li>
-                      <li class="breadcrumb-item active">
-                         Details
-                      </li>
-                   </ol>
-                </nav>
-             </div>
+            <div class="col p-0">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb ms-3">
+                  <li class="breadcrumb-item">
+                    <a href="{{ route('home') }}">Paket Travel</a>
+                  </li>
+                  <li class="breadcrumb-item active">
+                    Details
+                  </li>
+                </ol>
+              </nav>
+            </div>
           </div>
           <div class="row">
              <div class="col-lg-8 pl-lg-0">
@@ -157,15 +157,19 @@
                   @auth
                     <form action="{{ route('checkout_process', $item->id) }}" method="post">
                       @csrf
-                      <button class="btn btn-block btn-join-now mt-3 py-2" type="submit">
-                      Join Now
-                      </button>
+                      <div class="d-grid gap-2">
+                        <button class="btn btn-block btn-join-now mt-3 py-2" type="submit">
+                        Join Now
+                        </button>
+                      </div>
                     </form>
                   @endauth
                   @guest
-                    <a href="{{ (route('login')) }}" class="btn btn-block btn-join-now mt-3 py-2">
-                      Login or Register to Join
-                    </a>
+                    <div class="d-grid gap-2">
+                      <a href="{{ (route('login')) }}" class="btn btn-block btn-join-now mt-3 py-2">
+                        Login or Register to Join
+                      </a>
+                    </div>
                   @endguest
                 </div>
              </div>

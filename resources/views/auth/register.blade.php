@@ -33,7 +33,7 @@
               </div>
               <form method="POST" action="{{ route('register') }}">
                 @csrf
-                <div class="form-group">
+                <div class="form-group mb-4">
                   <label for="name">{{ __('Name') }}</label>
                   <input 
                     type="text"
@@ -63,7 +63,11 @@
                     required 
                     autocomplete="username" 
                     autofocus
+                    maxlength="15"
                   />
+                  <label style="visibility: hidden; font-size: 0.8rem;color: black;" id="notifikasiSisaKarakter">
+                    Sisa karakter: <span id="sisaKarakter"></span>
+                  </label>
                   @error('username')
                     <span class="invalid-feedback" role="alert">
                       <strong>{{ $message }}</strong>
@@ -71,7 +75,7 @@
                   @enderror
                 </div>
                 
-                <div class="form-group">
+                <div class="form-group mb-4">
                   <label for="email">{{ __('Email Address') }}</label>
                   <input 
                     type="email" 
@@ -89,7 +93,7 @@
                     @enderror
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-4">
                   <label for="exampleInputPassword">{{ __('Password') }}</label>
                   <input 
                     type="password" 
@@ -106,7 +110,7 @@
                   @enderror
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mb-4">
                   <label for="password-confirm">{{ __('Confirm Password') }}</label>
                   <input type="password" class="form-control" id="password-confirm" 
                   name="password_confirmation" 
@@ -114,13 +118,17 @@
                   autocomplete="new-password"
                 />
                 </div>
-                
-                <button 
-                  type="submit"
-                  class="btn btn-login btn-block"
-                >
-                  {{ __('Register') }}
-                </button>
+                <div class="d-grid gap-2">
+                  <button 
+                    type="submit"
+                    class="btn btn-login btn-block"
+                  >
+                    {{ __('Register') }}
+                  </button>
+                </div>
+                <p class="text-center mt-2">
+                  <a href="#">Saya lupa password</a>
+                </p>
               </form>
             </div>
           </div>
@@ -129,7 +137,7 @@
     </div>
   </main>
   @include('includes.script')
-
+  <script src="{{ asset('frontend/scripts/register.js') }}"></script>
 </body>
 
 </html>

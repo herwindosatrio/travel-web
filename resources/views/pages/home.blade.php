@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <!-- Header -->
+  <!-- Header -->
   <header class="text-center">
     <h1>
       Explore The Beautiful World
@@ -17,12 +17,12 @@
       <br>
       moment you never see before
     </p>
-    <a href="#popular" class="btn btn-get-started px-4 mt-4 mb-5">
+    <a href="#" class="btn btn-get-started px-4 mt-4 mb-5">
       Get Started
     </a>
     <form class="example" action="" style="margin:auto;max-width:400px">
       <input type="text" placeholder="Cari Disini.." name="search2">
-      <button type="submit"><i class="fa fa-search"></i></button>
+      <button type="submit"><i class="bi bi-search"></i></button>
     </form>
   </header>
 
@@ -30,19 +30,19 @@
     <div class="container">
       <section class="section-stats row justify-content-center" id="stats">
         <div class="col-3 col-md-2 stats-detail">
-          <h2>20K</h2>
+          <h3>20K</h3>
           <p>Members</p>
         </div>
         <div class="col-3 col-md-2 stats-detail">
-          <h2>12</h2>
+          <h3>12</h3>
           <p>Countries</p>
         </div>
         <div class="col-3 col-md-2 stats-detail">
-          <h2>3K</h2>
+          <h3>3K</h3>
           <p>Hotel</p>
         </div>
         <div class="col-3 col-md-2 stats-detail">
-          <h2>72</h2>
+          <h3>72</h3>
           <p>Partners</p>
         </div>
       </section>
@@ -62,7 +62,7 @@
         </div>
       </div>
     </section>
-
+    {{-- sampe sini --}}
     <section class="section-popular-content" id="popularContent">
       <div class="container">
         <div class="section-popular-travel row justify-content-center">
@@ -129,7 +129,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
           
-                <div class="card card-testimonial text-center">
+                <div id="testimonial-card" class="card card-testimonial text-center">
                   <div class="testimonial-content">
                     <img src="{{ url('frontend/images/testi-1.png') }}" alt="User" class="mb-4 rounded-circle">
                     <h3 class="mb-4">Angga Rizky</h3>
@@ -149,7 +149,7 @@
               </div>
               <div class="swiper-slide">
           
-                <div class="card card-testimonial text-center">
+                <div id="testimonial-card" class="card card-testimonial text-center">
                   <div class="testimonial-content">
                     <img src="{{ url('frontend/images/testi-2.png') }}" alt="User" class="mb-4 rounded-circle">
                     <h3 class="mb-4">Shayna</h3>
@@ -169,7 +169,7 @@
               </div>
               <div class="swiper-slide">
           
-                <div class="card card-testimonial text-center">
+                <div id="testimonial-card" class="card card-testimonial text-center">
                   <div class="testimonial-content">
                     <img src="{{ url('frontend/images/testi-3.png') }}" alt="User" class="mb-4 rounded-circle">
                     <h3 class="mb-4">Shabrina</h3>
@@ -188,7 +188,7 @@
               </div>
               <div class="swiper-slide">
               
-                <div class="card card-testimonial text-center">
+                <div id="testimonial-card" class="card card-testimonial text-center">
                   <div class="testimonial-content">
                     <img src="{{ url('frontend/images/testi-4.png') }}" alt="User" class="mb-4 rounded-circle">
                     <h3 class="mb-4">Jonathan</h3>
@@ -208,7 +208,7 @@
               </div>
               <div class="swiper-slide">
           
-                <div class="card card-testimonial text-center">
+                <div id="testimonial-card" class="card card-testimonial text-center">
                   <div class="testimonial-content">
                     <img src="{{ url('frontend/images/testi-5.png') }}" alt="User" class="mb-4 rounded-circle">
                     <h3 class="mb-4">Aulia</h3>
@@ -226,9 +226,6 @@
           
               </div>
             </div>
-            <!-- <div class="swiper-button-next swiper-navBtn"></div>
-            <div class="swiper-button-prev swiper-navBtn"></div> -->
-            <!-- <div class="swiper-pagination"></div> -->
           </div>
         </div>
         <div class="row">
